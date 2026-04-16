@@ -1,0 +1,29 @@
+create database secd;
+use secd;
+show databases;
+create table secd1(
+    student_name varchar(50),
+    student_mark int,
+    department varchar(50)
+);
+alter table secd1
+add collegefees decimal(7,2);
+select*from secd1
+INSERT INTO secd1 VALUES('kiran',80,'ECE',3000.50);
+INSERT INTO secd1 VALUES('Ravi',80,'IT',3000.50);
+INSERT INTO secd1 VALUES('Tarun',80,'EEE',3000.50);
+INSERT INTO secd1 VALUES('Mahesh',80,'CSE',3000.50);
+select*from secd1;
+alter table secd1
+rename column collegefees to admissionfees;
+alter table secd1
+modify column admissionfees int;
+alter table secd1
+drop column admissionfees;
+select*from secd1;
+select sum(student_mark) from secd1;
+select avg(student_mark) from secd1;
+select min(student_mark) from secd1;
+select max(student_mark) from secd1;
+select count(department) from secd1;
+select sum(student_mark) from secd1 where student_name="Tarun";
